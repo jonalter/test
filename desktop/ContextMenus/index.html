@@ -1,0 +1,30 @@
+<html>
+<body>
+    <style type="text/css">
+        body {
+            -webkit-user-select: auto !important;
+        }
+    </style>
+    Here is some text.
+    <br />
+    <textarea rows="10" cols="70">
+        This is a text area with text in it.
+    </textarea>
+    <br />
+	<script type="text/javascript">
+        var menu = Titanium.UI.createMenu();
+
+        menu.addItem('Cut', function() {
+            alert('cut');
+        });
+        menu.addItem('Copy', function() {
+            alert('copy');
+        });
+        menu.addItem('Paste', function() {
+            alert('paste');
+        });
+
+        Titanium.UI.getMainWindow().setContextMenu(menu);
+	</script>
+</body>
+</html>

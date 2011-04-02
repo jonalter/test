@@ -1,0 +1,19 @@
+NOTE: This is an incomplete tiapp.xml -- the "<activity>" element is what you should look at!
+
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app xmlns:ti="http://ti.appcelerator.org">
+    ...
+    <android xmlns:android="http://schemas.android.com/apk/res/android">
+        <activities>
+            <activity url="launchFromURL.js">
+                <intent-filter>
+                    <action android:name="android.intent.action.VIEW"/>
+                    <category android:name="android.intent.category.DEFAULT"/>
+                    <category android:name="android.intent.category.BROWSABLE"/>
+                    <data android:scheme="http" android:host="www.appcelerator.com"/>
+                </intent-filter>
+            </activity>
+        </activities>
+    </android>
+    ...
+</ti:app>

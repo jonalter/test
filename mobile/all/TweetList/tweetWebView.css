@@ -1,0 +1,17 @@
+body {
+    color: #ddd;
+    font: 15px/19px 'Helvetica Neue', sans-serif;
+}
+a {
+    color: #ff0c0c;
+    text-decoration: none;
+}
+.tweet {
+    border: 0 solid #888;
+    border-top-width: 1px;
+    margin: 5px 5px;
+    padding: 5px 0;
+}
+.tweet:first-child {
+    border-width: 0;
+}

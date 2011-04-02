@@ -1,0 +1,9 @@
+body {
+    background: white;
+    color: #444;
+    font: 15px/19px Arial, 'Helvetica Neue', sans-serif;
+}
+a {
+    color: #099;
+    text-decoration: none;
+}

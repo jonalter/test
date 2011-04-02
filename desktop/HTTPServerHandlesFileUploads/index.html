@@ -1,0 +1,35 @@
+<html>
+<body>
+<textarea id="txt" style="width: 100%; height: 100%;"></textarea>
+<script type="text/javascript">
+    try {
+        // grab a reference to our text area; we'll log messages to it
+        var text = document.getElementById('txt');
+
+        // create our server
+        server = Titanium.Network.createHTTPServer();
+        server.bind(8080, 'localhost', function(request, response) {
+
+            text.innerHTML += '\nContent Type: ' + request.getContentType();
+            text.innerHTML += '\nContent Length: ' + request.getContentLength();
+
+            if (request.getContentLength() > 0) {
+                text.innerHTML += '\nWrote response to uploadedFile in your user directory!';
+                var homeDir = Titanium.Filesystem.getUserDirectory();
+                var uploadedFile = Titanium.Filesystem.getFile(homeDir, 'uploadedFile');
+                uploadedFile.write(request.read());
+            }
+
+            response.setContentType('text/plain');
+            response.setContentLength(5);
+            response.setStatusAndReason('200','OK');
+            response.write('Done!');
+
+        });
+    }
+    catch (err) {
+        text.innerHTML += '\nError: ' + err;
+    }
+</script>
+</body>
+</html>
