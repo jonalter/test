@@ -1,0 +1,9 @@
+-Git must be installed.
+-Change the path to Git at line 88 of Git.php
+-Change 'source' and 'repo' in Config.php
+-Generate an ssh key pair that will be used by the server to connect to github.
+-Contents of .ssh/ must be put in appropriate spot to be accessed by the server 
+     eg. /Library/WebServer/.ssh/
+-The 'config' file that is with the ssh key pair must have 'BatchMode yes' in it.
+-_www needs read and write permission for the Repo/ directory
+-do NOT create a directory inside Repo/
