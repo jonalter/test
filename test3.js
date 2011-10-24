@@ -1,3 +1,5 @@
 var label;
 
-label = Ti.UI.createLabel();
+while(label){
+	label = Ti.UI.createLabel();
+}
