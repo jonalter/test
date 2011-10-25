@@ -1,6 +1,6 @@
 var label;
 
-if(label){
+if(label === true){
 	label = Ti.UI.createLabel();
 }
 var test;
